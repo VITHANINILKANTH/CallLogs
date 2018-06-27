@@ -156,7 +156,7 @@ public class LogsManager {
         int date = cursor.getColumnIndex(CallLog.Calls.DATE);
         int duration = cursor.getColumnIndex(CallLog.Calls.DURATION);
 
-        while (cursor.moveToNext()) {
+        while (cursor.hasNext()) {//for reverse 
             LogObject log = new LogObject(context);
 
             log.setNumber(cursor.getString(number));
